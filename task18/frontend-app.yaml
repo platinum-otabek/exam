@@ -1,0 +1,65 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: frontend-app
+  name: frontend-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: frontend-app
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: frontend-app
+    spec:
+      containers:
+      - image:  mrotabek1202/exam-1701:v2
+        name: frontend-app
+        env:
+          - name: env
+            valueFrom:
+              configMapKeyRef:
+                name: info
+                key: env
+          - name: grpc_port
+            valueFrom:
+              configMapKeyRef:
+                name: info
+                key: grpc_port
+          - name: env
+            valueFrom:
+              configMapKeyRef:
+                name: info
+                key: env
+          - name: log_leveI
+            valueFrom:
+              configMapKeyRef:
+                name: info
+                key: log_leveI
+          - name: DB_URI
+            valueFrom:
+              secretKeyRef:
+                name: database
+                key: DB_URI
+          - name: CPU
+            valueFrom:
+              configMapKeyRef:
+                name: new-envs
+                key: CPU
+          - name: MEMORY
+            valueFrom:
+              configMapKeyRef:
+                name: new-envs
+                key: MEMORY
+        resources:
+          requests:
+            cpu: '100m'
+            memory: '64Mi'
+          limits:
+            cpu: '200m'
+            memory: '128Mi'
+
+status: {}

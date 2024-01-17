@@ -1,0 +1,1 @@
+kubectl exec -it nginx1 -- /bin/sh -c "curl http://95.217.7.185:32106" > exam_17.01/task6/output.txt

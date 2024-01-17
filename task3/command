@@ -1,0 +1,1 @@
+kubectl get pods --all-namespaces -l project=practice > exam_17.01/task3/output

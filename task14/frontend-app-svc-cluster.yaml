@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2024-01-17T16:03:25Z"
+  labels:
+    app: frontend-app
+  name: frontend-app
+  namespace: e-34
+  resourceVersion: "6055807"
+  uid: 89dde87b-fde5-44e6-ad87-376970acf6ca
+spec:
+  clusterIP: 10.233.45.130
+  clusterIPs:
+  - 10.233.45.130
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 3000
+  selector:
+    app: frontend-app
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

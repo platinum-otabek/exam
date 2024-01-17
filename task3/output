@@ -1,0 +1,11 @@
+NAMESPACE   NAME     READY   STATUS    RESTARTS   AGE
+e-34        nginx1   1/1     Running   0          2m30s
+e-34        nginx2   1/1     Running   0          2m24s
+exam-27     nginx1   1/1     Running   0          2m15s
+exam-28     nginx1   1/1     Running   0          3m1s
+exam-38     nginx1   1/1     Running   0          7m30s
+exam-38     nginx2   1/1     Running   0          7m30s
+exam-40     nginx1   1/1     Running   0          2m18s
+exam-40     nginx2   1/1     Running   0          106s
+exam-46     nginx1   1/1     Running   0          11m
+exam-46     nginx2   1/1     Running   0          10m

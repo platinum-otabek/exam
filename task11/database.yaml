@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: database
+data:
+  DB_URI: cG9zdGdyZXM6Ly9hZG1pbjpzdXBlcnNlY3JldEAxMC4xMC4xMC4xOjU0MzIvZXhhbS1kYg==
+

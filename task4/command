@@ -1,0 +1,3 @@
+kubectl port-forward flask-app-54559c45cc-mz4tm 8080:5000 -n e-34
+
+curl localhost:8080 > exam_17.01/task4/output
